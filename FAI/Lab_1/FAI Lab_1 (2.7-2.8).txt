@@ -1,0 +1,114 @@
+2.7)
+
+Write pseudocode agent programs for the goal-based and utility-based agents : 
+
+Goal Based Agents :
+
+These agents percepts its environment and respond to it accordingly to achieve its goal. These kinds of agents take decisions based on how far they are currently from their goal(description of desirable situations). Their every action is intended to reduce their distance from the goal. They select choose the most desirable path to reach the goal amongst all possible paths
+
+Pseuocode :
+
+function : goalbased_agent (percept) returns action
+	state, agent's current perception of the environment
+	goal, description of the agent's objective
+	rules, condition-action rules
+	action, recent action (initially none)
+	plan, sequence of actions to be taken
+
+state <- State (state, action, percept)
+
+if goal_acheived (state, goal) then 
+	return no_action
+
+else
+    if plan is empty then-
+        plan <- formulate_plan(state, goal)
+
+    action <- select_action(plan)
+    state <- update_state(state, action, percept)
+
+return action
+
+Example : 
+
+An agent delivering packges in a city - Minimise delivery time and cost, Maximise efficiency
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Utility Based Agents :
+
+These agents perform actions based on utilities. It performs actions/makes decisions on an expected utility or desirability of an outcome. They try to reach the goal and also maximise overall utility/satisfaction.
+
+Pseuocode :
+
+function : utilitybased_agent (percept) returns an action                                                         
+	state, agent's current perception of the environment                                                     
+	possible states, possible states that may maximize utility                                                 
+	rules, condition-action rules 
+	action, recent action (initially none)
+
+state <- State (state, action, percept, possible states)
+rule <- rule_match (state, rules, possible states)
+action ← rule.action
+
+return action
+
+Example : 
+
+An agent which is an Autonomous vehicle 
+Utilities - safety, efficiency, and passenger comfort
+Goal - reach the destination, maximise utilities
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2.8)
+
+Implement a performance-measuring environment simulator for the vacuum-cleaner world depicted with 2 rooms (A and B). Your implementation should be modular so that the sensors, actuators, and environment characteristics (size, shape, dirt placement,etc.) can be changed easily.
+
+• The performance measure awards one point for each clean square at each time step, over a lifetime of 1000 time steps.
+• The geography of the environment is known a priori but the dirt distribution and the initial location of the agent are not. Clean squares stay clean and sucking cleans the current square. The Left and Right actions move the agent 
+  left and right except when this would take the agent outside the environment, in which case the agent remains where it is.
+• The only available actions are Left, Right, and Suck.
+• The agent correctly perceives its location and whether that location contains dirt.
+
+Code : 
+
+# Input the number of rows and columns for the floor grid
+
+m = int(input("Enter the number of floors: "))
+n = int(input("Enter the number of rooms: "))
+
+# Create a floor with rooms
+
+floor = [[1 for i in range(n)] for i in range(m)]
+
+# Get the status of rooms from user
+
+print("Enter the status of each rooms (1 - dirty, 0 - clean):")
+for i in range(m):
+    for j in range(n):
+        floor[i][j] = int(input(f"Status for rooms ({i}, {j}): "))
+
+# Initialize the performance measure
+
+performance = 0
+
+# Clean the dirty rooms and move to the other rooms
+# Performance is incremented for each movement and cleaning
+
+for i in range(m):
+    for j in range(n):
+        if floor[i][j] == 1:
+            print("Cleaning room ({}, {})".format(i, j))
+            floor[i][j] = 0
+            performance += 1
+        if j < n - 1:
+            print("Moving to room ({}, {})".format(i, j + 1))
+            performance += 1
+
+# Display the final rooms and the performance
+
+print("\nFinal floor grid after cleaning:")
+for row in floor:
+    print(*row)
+print(f"Performance measure: {performance}")
