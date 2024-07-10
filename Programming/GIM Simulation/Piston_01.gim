@@ -1,0 +1,230 @@
+
+Ventana, ancho, alto, separador: 1552: 832: 221
+
+Geometry
+
+Modulo activo: 1: nuevo orden
+
+Rejilla
+Longitud ejes      : 1
+Nº divisiones ejes : 10
+Nº div 4ª circunf  : 6
+Nº div pto en línea: 10
+Coord esféricas    : False
+
+Mecanismo plano: True
+
+Puntos: 14
+
+Punto, masa: 0: 0
+Ptos desliz  
+x, y, phi: -0.00406291728534769: 0.60301441923194: 0
+Par y fijo : 2: R: True
+
+Punto, masa: 1: 0
+Ptos desliz  
+x, y, phi: -0.105512044307189: 0.689745537147927: 0
+Par y fijo : 2: R: False
+
+Punto, masa: 2: 0
+Ptos desliz  
+x, y, phi: 0.802752298213508: 0.499213630387542: 0
+Par y fijo : 2: R: True
+
+Punto, masa: 3: 0
+Ptos desliz  
+x, y, phi: 0.334384298067505: 0.499213630387542: 0
+Par y fijo : 11: RD: False
+
+Punto, masa: 4: 0
+Ptos desliz  
+x, y, phi: 0.999344699650851: 0.601441680007025: 0
+Par y fijo : 2: R: True
+
+Punto, masa: 5: 0
+Ptos desliz  
+x, y, phi: 0.607139259032513: 0.594830254944389: 0
+Par y fijo : 0: None: False
+
+Punto, masa: 6: 0
+Ptos desliz  
+x, y, phi: 0.999344699650851: 0.398558319992975: 0
+Par y fijo : 2: R: True
+
+Punto, masa: 7: 0
+Ptos desliz  
+x, y, phi: 0.625706935964862: 0.396385581140929: 0
+Par y fijo : 0: None: False
+
+Punto, masa: 8: 0
+Ptos desliz  
+x, y, phi: 1.20380079714569: 0.297903009598408: 0
+Par y fijo : 2: R: True
+
+Punto, masa: 9: 0
+Ptos desliz  
+x, y, phi: 0.824083163925516: 0.297903009598408: 0
+Par y fijo : 0: None: False
+
+Punto, masa: 10: 0
+Ptos desliz  
+x, y, phi: 1.20065531872269: 0.700524251176677: 0
+Par y fijo : 2: R: True
+
+Punto, masa: 11: 0
+Ptos desliz  
+x, y, phi: 0.820937685502518: 0.700524251176677: 0
+Par y fijo : 0: None: False
+
+Punto, masa: 12: 0
+Ptos desliz  
+x, y, phi: 0.00222805803896448: -0.0889908397307093: 0
+Par y fijo : 2: R: True
+
+Punto, masa: 13: 0
+Ptos desliz  
+x, y, phi: -0.0100872069423045: 0.176108434698345: 0
+Par y fijo : 0: None: False
+
+Elementos: 13
+
+Elemento, embolo, disco, masa, densidad, abierto: 0: False: True: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 0: 1
+
+Elemento, embolo, disco, masa, densidad, abierto: 1: True: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 2: 3
+
+Elemento, embolo, disco, masa, densidad, abierto: 2: False: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 1: 3
+
+Elemento, embolo, disco, masa, densidad, abierto: 3: True: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 4: 5
+
+Elemento, embolo, disco, masa, densidad, abierto: 4: False: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 3: 5
+
+Elemento, embolo, disco, masa, densidad, abierto: 5: True: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 10: 11
+
+Elemento, embolo, disco, masa, densidad, abierto: 6: True: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 6: 7
+
+Elemento, embolo, disco, masa, densidad, abierto: 7: True: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 8: 9
+
+Elemento, embolo, disco, masa, densidad, abierto: 8: False: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 3: 7
+
+Elemento, embolo, disco, masa, densidad, abierto: 9: False: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 3: 9
+
+Elemento, embolo, disco, masa, densidad, abierto: 10: False: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 3: 11
+
+Elemento, embolo, disco, masa, densidad, abierto: 11: True: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 12: 13
+
+Elemento, embolo, disco, masa, densidad, abierto: 12: False: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 1: 13
+
+Visualización
+Desplazamiento x, y: -0.181309608145054: -0.193447489861877
+Giro phi, theta    : -90: 0
+Centro de giro     : 0.5: 0.5: 0.5
+Dimensión y zoom   : 1: 0.891568437587013
+Grosores           : 0.01: 4
+
+Ajustes
+Tipo de marco y suelo : 2: False
+Perspectiva           : False
+Fondo negro           : False
+Etiquetas y valores   : False: True: True: False: True
+Precisión gráfica     : 3
+Miniejes              : False
+Curva, grosor y puntos: 1: True
+
+Rodaduras: 0
+
+Kinematics
+
+Movimiento calculado: True
+
+Coordenadas iniciales
+
+Punto 0: -0.00406291728534769: 0.60301441923194
+Punto 1: -0.0692585717650308: 0.719477884856144
+Punto 2: 0.802752298213508: 0.499213630387542
+Punto 3: 0.356528766858104: 0.499213630387542
+Punto 4: 0.999344699650851: 0.601441680007025
+Punto 5: 0.629228307179734: 0.594988200765279
+Punto 6: 0.999344699650851: 0.398558319992975
+Punto 7: 0.647872017049656: 0.396443996588635
+Punto 8: 1.20380079714569: 0.297903009598408
+Punto 9: 0.846227632716115: 0.297903009598408
+Punto 10: 1.20065531872269: 0.700524251176677
+Punto 11: 0.843082154293118: 0.700524251176677
+Punto 12: 0.00222805803896448: -0.0889908397307093
+Punto 13: 0.00222803956064727: 0.201965916878586
+
+Puntos seleccionados   
+Elementos seleccionados
+
+Elemento de referencia: -1
+
+Resultados de puntos
+Trayectoria: False: True: 0: False
+Velocidad  : False: False: 2: 0.2
+Velo relati: False: False
+Aceleración: False: False: 10: 0.2
+Componentes: False: False
+Acel relati: False: False: False
+Curvatura  : False: False
+
+Resultados de elementos
+Barrido: False: False: 1
+Omega  : True: False: 10: 0.2: False: False
+Alpha  : True: False: 60: 0.2: False: False: False
+Cir    : False: False
+Polares: False: False: False
+ICA    : False: False
+Circunf: False: False: False
+Savary : False
+
+Resultados de rodaduras
+Contacto     : False
+Tangente     : False
+Velocidades  : False
+Aceleraciones: False
+Trayectoria  : False
+
+Otras opciones
+Ver actuadores : True
+Ver componentes: False
+
+Movimientos, auto, pos ini: 1: True: False
+
+Parametros: 25: 3: 1E-10: 0: 0: 0: True
+Incremento, máximo, tiempo de paso: 0.01: 2000: 0.01
+
+Posición: 78
+
+Dynamics
+
+Escalas fuerzas, momentos, fuerzas distribuidas: 0: 0.15: 0.05
+
+Synthesis
+
+Modo y submodo: -1: -1

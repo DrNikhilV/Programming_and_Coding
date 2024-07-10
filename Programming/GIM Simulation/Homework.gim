@@ -1,0 +1,130 @@
+
+Ventana, ancho, alto, separador: 1552: 832: 221
+
+Geometry
+
+Modulo activo: 1: nuevo orden
+
+Rejilla
+Longitud ejes      : 1
+Nº divisiones ejes : 10
+Nº div 4ª circunf  : 6
+Nº div pto en línea: 10
+Coord esféricas    : False
+
+Mecanismo plano: True
+
+Puntos: 4
+
+Punto, masa: 0: 0
+Ptos desliz  
+x, y, phi: 0: 0: 0
+Par y fijo : 2: R: True
+
+Punto, masa: 1: 0
+Ptos desliz  
+x, y, phi: -0.080658358874771: 0.0852229841634725: 0
+Par y fijo : 2: R: False
+
+Punto, masa: 2: 0
+Ptos desliz  
+x, y, phi: 0.2: 0.3: 0
+Par y fijo : 2: R: False
+
+Punto, masa: 3: 0
+Ptos desliz  
+x, y, phi: 0.2: 0: 0
+Par y fijo : 2: R: True
+
+Elementos: 3
+
+Elemento, embolo, disco, masa, densidad, abierto: 0: False: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 0: 1
+
+Elemento, embolo, disco, masa, densidad, abierto: 1: False: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 1: 2
+
+Elemento, embolo, disco, masa, densidad, abierto: 2: False: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 3: 2
+
+Visualización
+Desplazamiento x, y: 0.256982781480835: 0.264040006291152
+Giro phi, theta    : -90: 0
+Centro de giro     : 0.5: 0.5: 0.5
+Dimensión y zoom   : 1: 0.891568437587013
+Grosores           : 0.01: 4
+
+Ajustes
+Tipo de marco y suelo : 2: False
+Perspectiva           : False
+Fondo negro           : False
+Etiquetas y valores   : False: True: True: False: True
+Precisión gráfica     : 3
+Miniejes              : False
+Curva, grosor y puntos: 1: True
+
+Rodaduras: 0
+
+Kinematics
+
+Movimiento calculado: True
+
+Coordenadas iniciales
+
+Punto 0: 0: 0
+Punto 1: -0.080658358874771: 0.0852229841634725
+Punto 2: 0.2: 0.3
+Punto 3: 0.2: 0
+
+Puntos seleccionados   
+Elementos seleccionados
+
+Elemento de referencia: -1
+
+Resultados de puntos
+Trayectoria: False: True: 0: False
+Velocidad  : False: False: 2: 0.2
+Velo relati: False: False
+Aceleración: False: False: 10: 0.2
+Componentes: False: False
+Acel relati: False: False: False
+Curvatura  : False: True
+
+Resultados de elementos
+Barrido: False: False: 1
+Omega  : True: False: 10: 0.2: False: False
+Alpha  : True: False: 60: 0.2: False: False: False
+Cir    : False: False
+Polares: False: False: False
+ICA    : False: False
+Circunf: False: False: False
+Savary : False
+
+Resultados de rodaduras
+Contacto     : False
+Tangente     : False
+Velocidades  : False
+Aceleraciones: False
+Trayectoria  : False
+
+Otras opciones
+Ver actuadores : True
+Ver componentes: False
+
+Movimientos, auto, pos ini: 1: True: False
+
+Parametros: 25: 3: 1E-10: 0: 0: 0: True
+Incremento, máximo, tiempo de paso: 0.01: 2000: 0.01
+
+Posición: 0
+
+Dynamics
+
+Escalas fuerzas, momentos, fuerzas distribuidas: 0: 0: 0
+
+Synthesis
+
+Modo y submodo: -1: -1

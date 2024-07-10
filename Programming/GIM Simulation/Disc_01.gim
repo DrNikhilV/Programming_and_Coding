@@ -1,0 +1,72 @@
+
+Ventana, ancho, alto, separador: 1552: 832: 221
+
+Geometry
+
+Modulo activo: 0: nuevo orden
+
+Rejilla
+Longitud ejes      : 1
+Nº divisiones ejes : 10
+Nº div 4ª circunf  : 6
+Nº div pto en línea: 10
+Coord esféricas    : False
+
+Mecanismo plano: True
+
+Puntos: 3
+
+Punto, masa: 0: 0
+Ptos desliz  
+x, y, phi: 0.195674962574993: 0.499213630387542: 0
+Par y fijo : 2: R: True
+
+Punto, masa: 1: 0
+Ptos desliz  
+x, y, phi: 0.799606819790511: 0.499213630387542: 0
+Par y fijo : 11: RD: False
+
+Punto, masa: 2: 0
+Ptos desliz  
+x, y, phi: 0.300521505118697: 0.599348111886245: 0
+Par y fijo : 2: R: False
+
+Elementos: 2
+
+Elemento, embolo, disco, masa, densidad, abierto: 0: False: True: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 0: 2
+
+Elemento, embolo, disco, masa, densidad, abierto: 1: False: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 2: 1
+
+Visualización
+Desplazamiento x, y: 0: 0
+Giro phi, theta    : -90: 0
+Centro de giro     : 0.5: 0.5: 0.5
+Dimensión y zoom   : 1: 0.6
+Grosores           : 0.01: 4
+
+Ajustes
+Tipo de marco y suelo : 2: False
+Perspectiva           : False
+Fondo negro           : False
+Etiquetas y valores   : False: True: True: False: True
+Precisión gráfica     : 3
+Miniejes              : False
+Curva, grosor y puntos: 1: True
+
+Rodaduras: 0
+
+Kinematics
+
+Movimiento calculado: False
+
+Dynamics
+
+Escalas fuerzas, momentos, fuerzas distribuidas: 0: 0: 0
+
+Synthesis
+
+Modo y submodo: -1: -1

@@ -1,0 +1,91 @@
+
+Ventana, ancho, alto, separador: 1552: 832: 221
+
+Geometry
+
+Modulo activo: 0: nuevo orden
+
+Rejilla
+Longitud ejes      : 1
+Nº divisiones ejes : 10
+Nº div 4ª circunf  : 6
+Nº div pto en línea: 10
+Coord esféricas    : False
+
+Mecanismo plano: True
+
+Puntos: 6
+
+Punto, masa: 0: 0
+Ptos desliz  
+x, y, phi: 0.706815206312085: 0.59986894078211: 0
+Par y fijo : 11: RD: False
+
+Punto, masa: 1: 0
+Ptos desliz  
+x, y, phi: 0.40013106006983: 0.798034083121414: 0
+Par y fijo : 2: R: False
+
+Punto, masa: 2: 0
+Ptos desliz  
+x, y, phi: 0.205111397843985: 0.296330270373493: 0
+Par y fijo : 0: None: False
+
+Punto, masa: 3: 0
+Ptos desliz  : 2: 1
+x, y, phi: 0.245206829046455: 0.39947900152428: 0
+Par y fijo : 7: PR: False
+
+Punto, masa: 4: 0
+Ptos desliz  
+x, y, phi: 0.323066852115274: 0.59978019161162: 0
+Par y fijo : 2: R: True
+
+Punto, masa: 5: 0
+Ptos desliz  
+x, y, phi: 0.434731322722802: 0.39698558076806: 0
+Par y fijo : 2: R: True
+
+Elementos: 3
+
+Elemento, embolo, disco, masa, densidad, abierto: 0: False: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 2: 1: 4
+
+Elemento, embolo, disco, masa, densidad, abierto: 1: False: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 1: 0
+
+Elemento, embolo, disco, masa, densidad, abierto: 2: False: False: 1: 0: False
+Inercia: False: 0: 0: 0
+Puntos  : 5: 3
+
+Visualización
+Desplazamiento x, y: 0: 0
+Giro phi, theta    : -90: 0
+Centro de giro     : 0.5: 0.5: 0.5
+Dimensión y zoom   : 1: 0.6
+Grosores           : 0.01: 4
+
+Ajustes
+Tipo de marco y suelo : 2: False
+Perspectiva           : False
+Fondo negro           : False
+Etiquetas y valores   : False: True: True: False: True
+Precisión gráfica     : 3
+Miniejes              : False
+Curva, grosor y puntos: 1: True
+
+Rodaduras: 0
+
+Kinematics
+
+Movimiento calculado: False
+
+Dynamics
+
+Escalas fuerzas, momentos, fuerzas distribuidas: 0: 0.15: 0.05
+
+Synthesis
+
+Modo y submodo: -1: -1
