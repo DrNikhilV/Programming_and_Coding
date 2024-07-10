@@ -1,64 +1,79 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-#define MAX 100
-
-struct Stack {
-    int arr[MAX];
-    int top;
-};
-
-void initStack(struct Stack* stack) {
-    stack->top = -1;
-}
-
-int isFull(struct Stack* stack) {
-    return stack->top == MAX - 1;
-}
-
-int isEmpty(struct Stack* stack) {
-    return stack->top == -1;
-}
-
-void push(struct Stack* stack, int data) {
-    if (isFull(stack)) {
-        printf("Stack overflow\n");
-        return;
+int Push(int size, int* stack, int top)
+{
+    int n;
+    if (top == size-1)
+    {
+        printf("Stack is Full");
     }
-    stack->arr[++stack->top] = data;
+    else 
+    {
+        top++;
+        printf("Enter element: ");
+        scanf("%d", &n);
+        stack[top] = n;
+    }
+    return top;
 }
 
-int pop(struct Stack* stack) {
-    if (isEmpty(stack)) {
-        printf("Stack underflow\n");
-        return -1;
+int Pop(int* stack, int top)
+{
+    if (top == -1)
+    {
+        printf("Stack is Empty");
     }
-    return stack->arr[stack->top--];
+    else
+    {
+        printf("Deleted element: ", stack[top]);
+        top--;
+    }
+    return top;
 }
 
-int peek(struct Stack* stack) {
-    if (isEmpty(stack)) {
-        printf("Stack is empty\n");
-        return -1;
+void Display(int* stack, int top)
+{
+    for (int i=top; i>=0; i--)
+    {
+        printf("%d -> ", stack[i]);
     }
-    return stack->arr[stack->top];
+    printf("NULL");
 }
 
-int main() {
-    struct Stack stack;
-    initStack(&stack);
+int main()
+{
+    int size, choice, num=1, top=-1;
+    printf("Enter the size of stack: ");
+    scanf("%d", &size);
 
-    push(&stack, 10);
-    push(&stack, 20);
-    push(&stack, 30);
+    int stack[size];
 
-    printf("Top element is %d\n", peek(&stack));
-    printf("Elements: \n");
+    while (num)
+    {
+        printf("\nStack Operations\n");
+        printf("1. Push\n");
+        printf("2. Pop\n");
+        printf("3. Display\n");
+        printf("4. Exit\n");
+        printf("Enter choice: ");
+        scanf("%d", &choice);
 
-    while (!isEmpty(&stack)) {
-        printf("%d ", pop(&stack));
+        switch(choice)
+        {
+            case 1:
+                top = Push(size, stack, top);
+                break;
+            case 2:
+                top = Pop(stack, top);
+                break;
+            case 3:
+                Display(stack, top);
+                break;
+            case 4:
+                printf("Exit Succesful\n");
+                break;
+        }
     }
-    printf("\n");
 
     return 0;
 }
