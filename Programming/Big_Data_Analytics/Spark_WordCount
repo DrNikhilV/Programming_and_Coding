@@ -1,0 +1,6 @@
+val textFile = sc.textFile("file:///home/nikhil/Downloads/Word_Count/input_data/Input.txt")
+val words = textFile.flatMap(line => line.split(" "))
+val wordPairs = words.map(word => (word, 1))
+val wordCounts = wordPairs.reduceByKey((x, y) => x + y)
+wordCounts.foreach(println)
+wordCounts.saveAsTextFile("file:///home/nikhil/Downloads/Spark_Output")

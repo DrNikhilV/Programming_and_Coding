@@ -1,0 +1,28 @@
+hadoop-3.4.1/bin/hdfs namenode -format
+export PDSH_RCMD_TYPE=ssh
+start-all.sh
+stop-all.sh
+
+
+
+Hadoop version
+javac -version
+Create folder input_data
+Add a text file inside the input_data folder
+export HADOOP_CLASSPATH=$(hadoop classpath)
+echo $HADOOP_CLASSPATH
+
+hadoop fs -mkdir /WordCountTutorial
+hadoop fs -mkdir /WordCountTutorial/Input
+hadoop fs -put '/home/nikhil/Desktop/WordCountTutorial/input_data/input.txt' /WordCountTutorial/Input
+cd /home/nikhil/Desktop/WordCountTutorial
+
+Create a folder, tutorial_classes to store JAVA class files
+
+javac -classpath ${HADOOP_CLASSPATH} -d '/home/nikhil/Desktop/WordCountTutorial/tutorial_classes' '/home/nikhil/Desktop/WordCountTutorial/WordCount.java'
+
+jar -cvf firstTutorial.jar -C tutorial_classes/ .
+
+hadoop jar '/home/nikhil/Desktop/WordCountTutorial/firstTutorial.jar' WordCount /WordCountTutorial/Input /WordCountTutorial/Output
+
+hadoop dfs -cat /WordCountTutorial/Output

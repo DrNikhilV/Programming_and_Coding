@@ -1,0 +1,22 @@
+val textFile = sc.textFile("file:///home/nikhil/Downloads/Word_Count/input_data/Input.txt")
+
+val words = textFile.flatMap(line => line.split(" "))
+
+def classifyWord(word: String): String = {
+  val length = word.length
+  if (length >= 1 && length <= 3) {
+    "small"
+  } else if (length >= 4 && length <= 6) {
+    "medium"
+  } else {
+    "large"
+  }
+}
+
+val classifiedWords = words.map(word => (classifyWord(word), 1))
+
+val wordCounts = classifiedWords.reduceByKey((x, y) => x + y)
+
+wordCounts.foreach(println)
+
+wordCounts.saveAsTextFile("file:///home/nikhil/Downloads/Spark_Output")
