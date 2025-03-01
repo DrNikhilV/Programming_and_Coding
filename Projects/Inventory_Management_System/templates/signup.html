@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign Up</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, rgba(17, 20, 57, 1), rgba(13, 84, 190, 0.76), rgba(248, 248, 249, 1));
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; 
+            height: 100vh; 
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px; 
+            text-align: center;
+            margin-top: 40px; 
+        }
+
+        h1 {
+            color: #a1a1a1; 
+            margin-top: 40px; 
+            margin-bottom: 80px;
+            white-space: nowrap;
+        }
+
+        .form-box {
+            padding: 20px;
+            background-color: #ddd; 
+            border: 1px solid #ddd; 
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left; 
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="email"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .signup-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 3px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .signup-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <div class="form-box">
+            <form action="/signup" method="POST">
+                <div class="input-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone_number">Phone Number:</label>
+                    <input type="text" id="phone_number" name="phone_number" required>
+                </div>
+                <button type="submit" class="signup-button"><a href="/login">Submit</a></button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

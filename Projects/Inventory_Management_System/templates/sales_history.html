@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sales History</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, rgba(17, 20, 57, 1), rgba(13, 84, 190, 0.76), rgba(248, 248, 249, 1));
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; 
+            height: 100vh; 
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px; 
+            text-align: center;
+            margin-top: 40px; 
+        }
+
+        h2 {
+            color: #a1a1a1; 
+            margin-top: 40px; 
+            margin-bottom: 20px;
+            white-space: nowrap;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #ddd; 
+            border-radius: 5px;
+            overflow: hidden; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            color: #555;
+        }
+
+        th {
+            background-color: #007bff; 
+            color: white; 
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2; 
+        }
+
+        tr:hover {
+            background-color: #e6f7ff; 
+        }
+
+        .top-right-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #1d3ea1;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .top-right-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <a href="/home" class="top-right-btn">Go to Home</a>
+
+    <div class="container">
+        <h2>Sales History</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Product Name</th>
+                <th>Cost</th>
+                <th>Quantity</th>
+                <th>Date Sold</th>
+            </tr>
+            {% for sale in sales %}
+            <tr>
+                <td>{{ sale.id }}</td>
+                <td>{{ sale.product_name }}</td>
+                <td>{{ sale.cost }}</td>
+                <td>{{ sale.quantity }}</td>
+                <td>{{ sale.date_sold }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, rgba(17, 20, 57, 1), rgba(13, 84, 190, 0.76), rgba(248, 248, 249, 1));
+            height: 100vh;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(to bottom, rgba(49, 109, 199, 0.76), rgba(31, 86, 169, 0.76), rgb(45, 87, 184));
+            display: flex;
+            align-items: center; 
+            padding: 10px 20px;
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            z-index: 25;
+        }
+
+        .header h2 {
+            color: white;
+            margin: 0;
+            font-size: 2rem;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .logo-container img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        .top-right-btn {
+            position: absolute;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #ff4c4c;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .top-right-btn:hover {
+            background-color: #ff1f1f;
+        }
+
+        .marquee-container {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to bottom, rgba(49, 109, 199, 0.76), rgba(31, 86, 169, 0.76));
+            padding: 10px 0;
+            z-index: 15;
+        }
+
+        .marquee-text {
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            animation: marquee 15s linear infinite;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .navbar {
+            background-color: transparent; 
+            display: flex; 
+            justify-content: flex-end; 
+            position: fixed; 
+            left: 0;
+            right: 0; 
+            top: 120px; 
+            z-index: 10; 
+        }
+
+        .navbar a {
+            color: white; 
+            text-decoration: none; 
+            padding: 10px 20px; 
+            margin: 0 10px; 
+            transition: background-color 0.3s; 
+        }
+
+        .navbar a:hover {
+            background: linear-gradient(to bottom, rgba(49, 109, 199, 0.76), rgba(31, 86, 169, 0.76), rgb(45, 87, 184));
+            border-radius: 5px; 
+        }
+
+        .content {
+            position: relative;
+            top: 200px; 
+            left: 20px;
+            right: 20px;
+            overflow-y: auto;
+            padding: 20px;
+            color: white;
+            height: calc(100vh - 220px); 
+            display: flex; 
+            flex-direction: column; 
+            align-items: flex-start; 
+        }
+
+        .intro-text {
+            text-align: left; 
+            margin-bottom: 20px; 
+            width: 100%; 
+        }
+
+        .boxes {
+            display: flex; 
+            justify-content: center; 
+            width: 100%; 
+            height:fit-content;
+        }
+
+        .quote-box{
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            padding: 20px; 
+            text-align: center; 
+            width: 200px; 
+            height: 100px; 
+            transition: transform 0.3s ease; 
+            margin: 10px;
+        }
+
+        .date-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            padding: 20px; 
+            text-align: center; 
+            width: 200px; 
+            height: 100px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            transition: transform 0.3s ease; 
+            margin: 10px; 
+        }
+        
+        .quote-box:hover, .date-box:hover {
+            background-color: rgba(255, 255, 255, 0.2); 
+            transform: scale(1.05); 
+        }
+
+        .quote {
+                    margin-top: 30px;
+                    font-size: 1.2em;
+                    font-style: italic;
+                    text-align: center;
+                    color: lightgray;
+                }
+        
+        .features {
+                    display: flex; 
+                    justify-content: flex-start; 
+                    flex-wrap: wrap;
+                    margin-top: 20px; 
+                }
+
+        .features p {
+                    background-color: rgba(255, 255, 255, 0.1); 
+                    border: 1px solid rgba(255, 255, 255, 0.3); 
+                    border-radius: 8px;
+                    padding: 15px; 
+                    text-align: center;
+                    width: 180px; 
+                    margin: 12px; 
+                    box-sizing: border-box;
+                    transition: transform 0.3s ease; 
+                    color: black;
+                    font-family: 'Roboto', sans-serif;
+                }
+
+        .features p:hover {
+                    background-color: rgba(255, 255, 255, 0.2); 
+                    transform: scale(1.05); 
+                }
+
+        .features-title {
+                    font-size: 1.5rem; 
+                    color: black; 
+                    text-align: center; 
+                    margin-bottom: 10px; 
+                    margin-top: 20px; 
+                }
+                .image-container {
+            display: inline-block;
+            overflow: hidden;
+            margin-left: 1000px; 
+            margin-top: -110px;
+        }
+
+        .image-container img {
+            width: 300px;
+            height: auto;
+            transition: transform 0.3s ease, opacity 0.3s ease; 
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo-container">
+            <img src="https://webfiles.amrita.edu/2024/04/ZvmNQEuB-amrita-vishwa-vidyapeetham-university-logo-white-version.svg" alt="Amrita Vishwa Vidyapeetham University Logo">
+        </div>
+        <h2>Inventory Management System</h2>
+        <a href="/login" class="top-right-btn">Logout</a>
+    </div>
+
+    <div class="marquee-container">
+        <div class="marquee-text">Welcome to Amrita Store's Inventory Management System! Effortlessly Track and Manage Inventory with Our Comprehensive Solution!</div>
+    </div>
+
+    <div class="navbar">
+        <a href="/view_inventory">View Inventory</a>
+        <a href="/add_sales">Add Sales</a>
+        <a href="/sales_history">Sales History</a>
+    </div>
+
+    <div class="content">
+        <div class="intro-text">
+            <p>Welcome to the Amrita Stores Inventory Management Site</p>
+            <p>Navigate through the options above to manage inventory, add sales, or view sales history</p>
+        </div>
+    
+        <div class="boxes">
+            <div class="quote-box" id="quote"><p></p></div>
+            <div class="date-box" id="date"></div>
+        </div>
+    
+        <h3 class="features-title">Features of our IMS</h3>
+    
+        <div class="features">
+            <p>Real-time Inventory Tracking</p>
+            <p>Product Categorization</p>
+            <p>Inventory Management</p>
+            <p>Inventory Insights & Analytics</p>
+        </div>
+    </div>
+    <div class="image-container">
+        <img src="https://mediasoftbd.com/wp-content/uploads/2023/10/Inventory-management-system-mediasoft.png" alt="Inventory Management System">
+    </div>
+
+    <script>
+        const quotes = [
+            {
+                text: "The best way to predict the future is to create it.",
+                author: "Peter Drucker"
+            },
+            {
+                text: "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+                author: "Winston S. Churchill"
+            },
+            {
+                text: "Do not watch the clock. Do what it does. Keep going.",
+                author: "Sam Levenson"
+            },
+            {
+                text: "The only limit to our realization of tomorrow is our doubts of today.",
+                author: "Franklin D. Roosevelt"
+            },
+            {
+                text: "Opportunities don't happen, you create them.",
+                author: "Chris Grosser"
+            }
+        ];
+    
+        function displayRandomQuote() {
+            const quoteElement = document.getElementById('quote');
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const selectedQuote = quotes[randomIndex];
+
+            quoteElement.innerHTML = '';
+
+            const quoteText = document.createElement('div');
+            const quoteAuthor = document.createElement('div');
+
+            quoteText.textContent = `"${selectedQuote.text}"`;
+            quoteAuthor.textContent = `- ${selectedQuote.author}`;
+
+            quoteText.style.marginBottom = '5px'; 
+            quoteAuthor.style.fontStyle = 'italic'; 
+
+            quoteElement.appendChild(quoteText);
+            quoteElement.appendChild(quoteAuthor);
+        }
+
+
+        function displayCurrentDateTime() {
+            const dateElement = document.getElementById('date');
+            const currentDate = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            dateElement.textContent = currentDate.toLocaleString('en-US', options);
+        }
+
+        window.onload = function() {
+            displayRandomQuote();
+            displayCurrentDateTime();
+        };
+    </script>
+
+</body>
+</html>
