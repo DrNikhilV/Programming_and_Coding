@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>6.4 - First Character Uppercase</title>
+</head>
+<body>
+  <h2>First Character Uppercase</h2>
+  <script>
+    function isFirstUppercase(str) {
+      return /^[A-Z]/.test(str);
+    }
+
+    let test = "Hello";
+    document.write(test + " starts with uppercase? " + isFirstUppercase(test));
+  </script>
+</body>
+</html>

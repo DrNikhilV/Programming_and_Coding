@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>6.3 - Palindrome</title>
+</head>
+<body>
+  <h2>Palindrome Checker</h2>
+  <script>
+    function isPalindrome(str) {
+      str = str.toLowerCase().replace(/[^a-z0-9]/g, '');
+      return str === str.split('').reverse().join('');
+    }
+
+    let test = "Madam";
+    document.write(test + " is palindrome? " + isPalindrome(test));
+  </script>
+</body>
+</html>

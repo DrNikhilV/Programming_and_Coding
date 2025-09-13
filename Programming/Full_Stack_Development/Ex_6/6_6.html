@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>6.6 - Mobile Number Validation</title>
+</head>
+<body>
+  <h2>Mobile Number Validation</h2>
+  <form onsubmit="return validateNumber()">
+    <label>Enter Mobile Number: </label>
+    <input type="text" id="mobile" required>
+    <button type="submit">Check</button>
+  </form>
+
+  <script>
+    function validateNumber() {
+      let num = document.getElementById("mobile").value;
+      let regex = /^[6-9]\d{9}$/;  // Indian 10-digit mobile numbers starting 6-9
+      if (regex.test(num)) {
+        alert("Valid Mobile Number!");
+        return true;
+      } else {
+        alert("Invalid Mobile Number!");
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>

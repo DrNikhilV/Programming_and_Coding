@@ -1,0 +1,192 @@
+1. Install Git
+To use Git, first install it on your computer:
+
+Check if Git is installed
+Run this command to verify:
+
+git --version
+Set up your Git configuration
+Set your Git username and email:
+
+git config --global user.name "YOUR_USERNAME"
+git config --global user.email "YOUR_EMAIL"
+
+2. Create and Initialize a Project in Git
+Navigate to your project folder
+Let's assume you have a folder on your desktop called Git and GitHub tutorial. To navigate to this folder in the terminal:
+
+cd desktop
+cd Git\ and\ GitHub\ tutorial
+Initialize the project
+Inside your project folder, run:
+
+git init
+This initializes the repository.
+
+3. Add Files to Git
+Create a file (e.g., todo.txt)
+Inside your project folder, create a file named todo.txt with content like:
+
+MY TO-DO LIST
+1. Write an article.
+2. Code.
+3. Study books.
+4. Attend classes on time.
+5. Visit aunt.
+6. Apply for remote jobs.
+Stage the file for tracking
+Run the following command to add the file to the Git staging area:
+
+git add .
+Commit the file
+After staging, commit the file with a message:
+
+
+git commit -m "first commit"
+
+4. Push the Repository to GitHub
+Create a GitHub account
+If you haven’t already, create an account on GitHub.
+
+Create a new repository on GitHub
+Go to your GitHub account, click the + icon, and select New repository. Name your repository and click Create repository.
+
+Connect your local repository to GitHub
+Run the following command to link your local repository to GitHub:
+
+git remote add origin https://github.com/YOUR_USERNAME/your-repo-name.git
+Set the branch name to main
+The default branch may be called master. Change it to main:
+
+git branch -M main
+Push your changes to GitHub
+Finally, push your commit to GitHub:
+
+git push -u origin main
+
+5. Modify Files and Push Updates
+Make changes to the file
+For example, add a new task to your todo.txt:
+
+MY TO-DO LIST
+1. Write an article.
+2. Code.
+3. Study books.
+4. Attend classes on time.
+5. Visit aunt.
+6. Apply for remote jobs.
+7. Practice code
+Check the status
+Run git status to see the state of the file:
+
+bash
+Copy
+Edit
+git status
+The file should now be in the modified state.
+
+Stage the changes
+Stage the modified file:
+
+bash
+Copy
+Edit
+git add .
+Commit the changes
+Commit your changes with a descriptive message:
+
+bash
+Copy
+Edit
+git commit -m "added new task"
+Push the changes to GitHub
+Push the updated file to GitHub:
+
+bash
+Copy
+Edit
+git push -u origin main
+6. Branching in Git
+Create a new branch
+Create a new branch (e.g., test) and switch to it:
+
+bash
+Copy
+Edit
+git checkout -b test
+Check existing branches
+To list all branches:
+
+bash
+Copy
+Edit
+git branch
+Modify the file on the new branch
+Add more tasks, for example:
+
+markdown
+Copy
+Edit
+MY TO-DO LIST
+1. Write an article.
+2. Code.
+3. Study books.
+4. Attend classes on time.
+5. Visit aunt.
+6. Apply for remote jobs.
+7. Practice code
+8. Complete internship task.
+9. Practice chess openings.
+10. Solve chess puzzles.
+11. Check exam schedule.
+Stage and commit changes on the test branch
+Stage and commit your changes to the test branch:
+
+bash
+Copy
+Edit
+git add .
+git commit -m "added more tasks"
+Switch back to the main branch
+Switch back to the main branch:
+
+bash
+Copy
+Edit
+git checkout main
+Merge changes from the test branch to main
+Merge the changes from the test branch into the main branch:
+
+bash
+Copy
+Edit
+git merge test
+Push the merged changes to GitHub
+Push the main branch updates to GitHub:
+
+bash
+Copy
+Edit
+git push -u origin main
+7. Pulling a Repository from GitHub
+Clone a remote repository
+If you want to clone a repository from GitHub to your local machine, run:
+
+bash
+Copy
+Edit
+git clone https://github.com/YOUR_USERNAME/your-repo-name.git
+Navigate back one directory
+To go back one directory:
+
+bash
+Copy
+Edit
+cd ..
+Clone using the HTTPS URL
+After copying the repository's HTTPS URL from GitHub, run:
+
+bash
+Copy
+Edit
+git clone YOUR_HTTPS_URL

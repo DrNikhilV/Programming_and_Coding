@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>6.2 - Leap Year</title>
+</head>
+<body>
+  <h2>Leap Year Checker</h2>
+  <script>
+    function isLeapYear(year) {
+      return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
+    }
+
+    let year = 2024;
+    document.write(year + " is leap year? " + isLeapYear(year));
+  </script>
+</body>
+</html>

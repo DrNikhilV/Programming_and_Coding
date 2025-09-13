@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input { padding: 0.5rem 2rem; margin-top: 10px; }
+label { font-size: 1rem; color: black; }
+.form-group { margin-bottom: 15px; }
+</style>
+</head>
+<body>
+<h1 style="color:green;">AJAX example</h1>
+<h3>Ajax Database Operations</h3>
+<hr><br>
+
+<div class="form-group">
+<label for="cgpa_val">Enter the CGPA: </label>
+<input type="text" id="cgpa_val" name="stu_cgpa">
+<input type="button" onclick="ajax_fun()" value="Submit">
+</div>
+
+<br>
+<hr>
+
+<div id="result-box">Result will display here</div>
+
+<script>
+function ajax_fun() {
+  var str = document.getElementById('cgpa_val').value;
+  if (str === "") {
+    document.getElementById("result-box").innerHTML = "Please enter a valid CGPA.";
+    return;
+  }
+  
+  const ajax_Request = new XMLHttpRequest();
+  ajax_Request.onreadystatechange = function() {
+    if (ajax_Request.readyState == 4 && this.status == 200) {
+      document.getElementById("result-box").innerHTML = ajax_Request.responseText;
+    }
+  };
+  
+  console.log("CGPA passed to server: " + str);
+  ajax_Request.open("GET", "index.php?q=" + str, true);
+  ajax_Request.send();
+}
+</script>
+</body>
+</html>

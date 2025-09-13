@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Demonstration</title>
+  <style type="text/css">
+    /* 1) Different fonts and text styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('background.jpg'); /* page background image */
+      background-repeat: repeat; /* tile background */
+      margin: 20px;
+    }
+
+    .headline {
+      color: red;
+      font-size: 24px;
+      font-family: "Trebuchet MS", sans-serif;
+      text-decoration: underline;
+    }
+
+    .special {
+      font-style: italic;
+      font-weight: bold;
+      font-size: 20px;
+      color: green;
+    }
+
+    /* 2) Background image for single element */
+    .box {
+      background-image: url('element-bg.jpg');
+      background-size: cover;
+      padding: 20px;
+      border: 2px solid black;
+      width: 300px;
+      margin-top: 20px;
+    }
+
+    /* 3) Link styles */
+    a:link {
+      text-decoration: none;
+      color: blue;
+    }
+    a:visited {
+      text-decoration: none;
+      color: purple;
+    }
+    a:active {
+      text-decoration: none;
+      color: green;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: red;
+    }
+
+    /* 4) Layers using z-index */
+    .layer1 {
+      position: relative;
+      font-size: 40px;
+      color: black;
+      z-index: 2;
+    }
+    .layer2 {
+      position: relative;
+      top: -40px;
+      left: 20px;
+      color: red;
+      font-size: 60px;
+      z-index: 1;
+    }
+
+    /* 5) Customized cursors */
+    .xlink { cursor: crosshair; }
+    .hlink { cursor: help; }
+    .pointer { cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <h1 class="headline">This is headline style</h1>
+  <p class="special">This text uses a special italic + bold + styled font.</p>
+
+  <div class="box">
+    This box has its own background image.
+  </div>
+
+  <h2>Link Styles</h2>
+  <a href="mypage.html" class="xlink">CROSS LINK</a><br>
+  <a href="mypage.html" class="hlink">HELP LINK</a><br>
+  <a href="mypage.html" class="pointer">POINTER LINK</a>
+
+  <h2>Working with Layers</h2>
+  <div class="layer1">LAYER 1</div>
+  <div class="layer2">LAYER 2</div>
+
+</body>
+</html>
